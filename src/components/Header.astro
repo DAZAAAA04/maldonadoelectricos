@@ -81,16 +81,19 @@ import { SITE_TITLE } from '../consts';
 		min-width: fit-content;
 	}
 
+
 	.logo-image {
-		width: 58px;
-		height: 58px;
+		width: 72px;
+		height: auto;
 
-		object-fit: cover;
+		object-fit: contain;
 
-		border-radius: 14px;
+		border-radius: 0;
 
-		box-shadow:
-			0 8px 25px rgba(0,0,0,0.08);
+		display: block;
+
+		filter:
+			drop-shadow(0 8px 20px rgba(0,0,0,0.12));
 	}
 
 	.logo-text {
