@@ -7,13 +7,16 @@ import { SITE_TITLE } from '../consts';
 	<nav>
 
 		<!-- LOGO -->
-		<div class="logo">
-			<div class="LOGO_ICON">⚡</div>
+		<a href="/" class="logo">
 
-			<h2>
-				<a href="/">{SITE_TITLE}</a>
-			</h2>
-		</div>
+			<img src="/favicon.jpeg" alt="Logo" class="logo-image" />
+
+			<div class="logo-text">
+				<span class="logo-top">MALDONADO</span>
+				<span class="logo-bottom">ELÉCTRICOS ⚡</span>
+			</div>
+
+		</a>
 
 		<!-- LINKS -->
 		<div class="internal-links">
@@ -24,7 +27,10 @@ import { SITE_TITLE } from '../consts';
 
 		<!-- CTA -->
 		<div class="right-section">
-			<a href="mailto:maldonadoelectricos@gmail.com" class"email-btn">
+			<a
+				href="mailto:maldonadoelectricos@gmail.com"
+				class="email-btn"
+			>
 				maldonadoelectricos@gmail.com
 			</a>
 		</div>
@@ -33,13 +39,17 @@ import { SITE_TITLE } from '../consts';
 </header>
 
 <style>
+
 	header {
 		position: sticky;
 		top: 0;
 		z-index: 1000;
+
 		padding: 1rem 2rem;
+
 		background: rgba(255, 255, 255, 0.9);
 		backdrop-filter: blur(10px);
+
 		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 	}
 
@@ -50,6 +60,7 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		gap: 2rem;
 	}
 
@@ -58,33 +69,44 @@ import { SITE_TITLE } from '../consts';
 	.logo {
 		display: flex;
 		align-items: center;
-		gap: 0.8rem;
-	}
+		gap: 1rem;
 
-	.logo-icon {
-		width: 42px;
-		height: 42px;
-		border-radius: 12px;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		font-size: 1.2rem;
-
-		background: linear-gradient(135deg, #facc15, #f59e0b);
-		box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
-	}
-
-	h2 {
-		margin: 0;
-		font-size: 1rem;
-		font-weight: 700;
-	}
-
-	h2 a {
 		text-decoration: none;
+	}
+
+	.logo-image {
+		width: 58px;
+		height: 58px;
+
+		object-fit: cover;
+
+		border-radius: 14px;
+
+		box-shadow:
+			0 8px 25px rgba(0,0,0,0.08);
+	}
+
+	.logo-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1;
+	}
+
+	.logo-top {
+		font-size: 1.3rem;
+		font-weight: 800;
+		letter-spacing: 1px;
+
 		color: #111827;
+	}
+
+	.logo-bottom {
+		font-size: 1.1rem;
+		font-weight: 600;
+
+		color: #f59e0b;
+
+		margin-top: 0.3rem;
 	}
 
 	/* LINKS */
@@ -97,10 +119,14 @@ import { SITE_TITLE } from '../consts';
 
 	.internal-links a {
 		position: relative;
+
 		text-decoration: none;
+
 		color: #374151;
 		font-weight: 500;
+
 		padding: 0.5rem 0;
+
 		transition: 0.3s ease;
 	}
 
@@ -110,6 +136,7 @@ import { SITE_TITLE } from '../consts';
 
 	.internal-links a::after {
 		content: '';
+
 		position: absolute;
 		left: 0;
 		bottom: -4px;
@@ -118,6 +145,7 @@ import { SITE_TITLE } from '../consts';
 		height: 2px;
 
 		background: #f59e0b;
+
 		border-radius: 999px;
 
 		transition: 0.3s ease;
@@ -134,21 +162,26 @@ import { SITE_TITLE } from '../consts';
 		align-items: center;
 	}
 
-	.phone-btn {
-		padding: 0.85rem 1.2rem;
+	.email-btn {
+		padding: 0.9rem 1.4rem;
+
 		border-radius: 999px;
 
 		background: #111827;
 		color: white;
 
 		text-decoration: none;
+
 		font-size: 0.9rem;
 		font-weight: 500;
 
 		transition: 0.3s ease;
+
+		box-shadow:
+			0 10px 25px rgba(17, 24, 39, 0.15);
 	}
 
-	.phone-btn:hover {
+	.email-btn:hover {
 		background: #1f2937;
 		transform: translateY(-2px);
 	}
@@ -161,7 +194,7 @@ import { SITE_TITLE } from '../consts';
 			display: none;
 		}
 
-		.phone-btn {
+		.email-btn {
 			display: none;
 		}
 
@@ -169,8 +202,18 @@ import { SITE_TITLE } from '../consts';
 			padding: 1rem;
 		}
 
-		nav {
-			gap: 1rem;
+		.logo-image {
+			width: 48px;
+			height: 48px;
+		}
+
+		.logo-top {
+			font-size: 1rem;
+		}
+
+		.logo-bottom {
+			font-size: 0.9rem;
 		}
 	}
+
 </style>
